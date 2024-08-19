@@ -1,26 +1,24 @@
-namespace Dag_1___HelloWorld;
-
-public class Person
+namespace Dag_1___HelloWorld
 {
-    private string name;
 
-    public Person(string name)
+    internal class Person
     {
-        this.name = name;
-    }
+        private string name;
 
-    public string getName()
-    {
-        return name;
-    }
+        public Person(string name)
+        {
+            this.name = name;
+        }
 
-    public void setName(string name)
-    {
-        this.name = name;
-    }
+        public string Fornavn
+        {
+            get { return name; }
+            set { name = value; }
+        }
 
-    public override string ToString()
-    {
-        return name;
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }

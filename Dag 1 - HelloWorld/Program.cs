@@ -8,7 +8,7 @@ namespace Dag_1___HelloWorld
         {
             Person person = new Person("Mikkel");
             Console.WriteLine(person);
-            person.setName("Mathias");
+            person.Fornavn = "Mathias";
             Console.WriteLine(person);
 
             var hund = new Animal("Hund");
