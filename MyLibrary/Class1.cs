@@ -11,7 +11,7 @@ public class Animal : IAnimal
 
     public bool isDog()
     {
-        return specie == "Hund";
+        return specie.Equals("Hund");
     }
 
     public string getSpecie()
