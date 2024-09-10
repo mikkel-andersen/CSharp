@@ -1,0 +1,29 @@
+
+@{
+    ViewData["Title"] = "SimpleCalculator";
+}
+
+<h1>SimpleCalculator</h1>
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.Label("Number1") <br/>
+        @Html.TextBox("Number1")
+    </p>
+    <p>
+        @Html.Label("Number2") <br/>
+        @Html.TextBox("Number2")
+    </p>
+    <p>
+        <input type="submit" name="Operator" value="+">
+        <input type="submit" name="Operator" value="-">
+        <input type="submit" name="Operator" value="*">
+        <input type="submit" name="Operator" value="/">
+    </p>
+        @if (ViewBag.Number1 != null && ViewBag.Number2 != null)
+        {
+            <br/>
+            <p>@ViewBag.Number1 @ViewBag.Operator @ViewBag.Number2 = @ViewBag.Result</p>
+        }
+    
+}
