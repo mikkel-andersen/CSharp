@@ -1,0 +1,11 @@
+@model Person
+
+@{
+ViewData["Title"] = "Vis En";
+}
+
+<h1>VisEn</h1>
+@* @Html.Partial("VisEnPerson", Model) *@
+
+@*View component*@
+@await Component.InvokeAsync("VisEnPerson", new { p = Model })

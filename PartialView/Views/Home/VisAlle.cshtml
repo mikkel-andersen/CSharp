@@ -1,0 +1,15 @@
+@model List<Person>
+
+@{
+    ViewData["Title"] = "Vis Alle";
+}
+
+<h1>VisAlle</h1>
+
+@foreach (var person in Model)
+{
+    @*@Html.Partial("VisEnPerson", person)  // Partial view *@
+    
+    @*View component*@
+    @await Component.InvokeAsync("VisEnPerson", new { p = person })
+}
