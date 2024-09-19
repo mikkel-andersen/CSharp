@@ -4,13 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Iterative Fibonacci
+        // Iterativ Fibonacci
         Console.WriteLine("Vælg højeste fibonacci tal: ");
         int input = int.Parse(Console.ReadLine());
         Console.WriteLine("---------------------------");
         Fibonacci(input);
 
-        // Recursive Fibonacci
+        // Rekursiv Fibonacci
         Console.WriteLine("");
         Console.WriteLine("Rekursiv fibonacci");
         Console.WriteLine("Vælg højeste fibonacci tal: ");
@@ -40,7 +40,6 @@ class Program
         {
             return n;
         }
-        else
         {
             return FibonacciRecursive(n - 1) + FibonacciRecursive(n - 2);
         }

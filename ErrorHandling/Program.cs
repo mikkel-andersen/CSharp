@@ -14,7 +14,7 @@ class Program
         }
     }
 
-    static public void MyNormalMethod(int num = 0)
+    public static void MyNormalMethod(int num = 0)
     {
         try
         {
@@ -31,7 +31,7 @@ class Program
         }
     }
 
-    static private void MyMethodWithError(int num = 0)
+    private static void MyMethodWithError(int num = 0)
     {
         Console.WriteLine("Inde i MyMethodWithError...");
         throw new InvalidOperationException("En fejl er opstået i MyMethodWithError.");
