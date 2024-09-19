@@ -1,0 +1,37 @@
+@model ParkingTicketMachine.Models.ParkingTicketMachine
+@{
+    ViewData["Title"] = "Parking Ticket Machine";
+}
+
+<h1>Parking Ticket Machine</h1>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.TimeNow)
+        @Html.EditorFor(model => model.TimeNow, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.PaidUntil)
+        @Html.EditorFor(model => model.PaidUntil, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.AmountInserted)
+        @Html.EditorFor(model => model.AmountInserted, new { htmlAttributes = new { @class = "form-control", @id = "amountInserted" } })
+    </div>
+    <div class="form-group">
+        <label for="Info">Info</label>
+        <input type="text" id="Info" name="Info" class="form-control" value="@Model.Info" readonly />
+    </div>
+
+    <h2>Coin insert</h2>
+    <div class="form-group">
+        <button type="submit" name="coin" value="1" class="btn btn-secondary">1 Kr</button>
+        <button type="submit" name="coin" value="2" class="btn btn-secondary">2 Kr</button>
+        <button type="submit" name="coin" value="5" class="btn btn-secondary">5 Kr</button>
+        <button type="submit" name="coin" value="10" class="btn btn-secondary">10 Kr</button>
+        <button type="submit" name="coin" value="20" class="btn btn-secondary">20 Kr</button>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
