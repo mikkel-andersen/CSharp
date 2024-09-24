@@ -1,0 +1,9 @@
+@Person_HostAddress = http://localhost:5257
+
+GET {{Person_HostAddress}}/api/person/getPersoner
+Accept: application/json
+
+###
+
+GET {{Person_HostAddress}}/api/person/getPersonById/1
+Accept: application/json

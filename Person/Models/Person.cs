@@ -1,4 +1,4 @@
-namespace Person
+namespace Person.Models
 {
     public class Person
     {
@@ -6,4 +6,7 @@ namespace Person
         public string Name { get; set; }
         public int Age { get; set; }
     }
+    
+    
+    
 }
